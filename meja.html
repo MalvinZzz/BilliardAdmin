@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pemesanan Meja - Admin Billiard</title>
+  <link rel="stylesheet" href="meja.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>🎱 Billiard</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="datapelanggan.html">Data Pelanggan</a>
+    <a href="meja.html">Pemesanan Meja</a>
+    <a href="transaksi.html">Transaksi</a>
+  </div>
+  <div class="main">
+    <div class="topbar">
+      <h2>Pemesanan Meja</h2>
+      <p>Kelola jadwal dan status pemesanan</p>
+    </div>
+    <div class="content">
+      <button class="btn-tambah">+ Tambah Booking</button>
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama Pelanggan</th>
+            <th>No Meja</th>
+            <th>Waktu Mulai</th>
+            <th>Durasi</th>
+            <th>Status</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Andi</td>
+            <td>Meja 3</td>
+            <td>17:00</td>
+            <td>2 jam</td>
+            <td>Aktif</td>
+            <td><button>Edit</button> <button>Selesai</button></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Siti</td>
+            <td>Meja 5</td>
+            <td>18:30</td>
+            <td>1 jam</td>
+            <td>Menunggu</td>
+            <td><button>Edit</button> <button>Batalkan</button></td>
+          </tr>
+          <!-- Data booking lainnya -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
