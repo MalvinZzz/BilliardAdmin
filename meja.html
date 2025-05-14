@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pemesanan Meja - Admin Billiard</title>
   <link rel="stylesheet" href="meja.css">
-  <link rel="logo" href="asset/LOGO 1.png, LOGO 2.png">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-/..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <div class="sidebar">
-    <img src="asset/LOGO 1.png" width="180" height="100">
+    <img src="asset/LOGO dashboard.png" width="180" height="100">
     <a href="dashboard.html">Dashboard</a>
     <a href="datapelanggan.html">Data Pelanggan</a>
     <a href="meja.html">Pemesanan Meja</a>
@@ -19,15 +18,26 @@
   <div class="main">
     <div class="topbar">
       <h2>Pemesanan Meja</h2>
-      <p>Kelola jadwal dan status pemesanan</p>
+      <div class="header-right">
+        <div class="profile-dropdown">
+          <i class="fa-regular fa-circle-user profile-icon" id="profileIcon"></i>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="profil.html">Profil</a>
+            <a href="logout.html">Logout</a>
+          </div>
+        </div>
+        <span class="admin-name">Admin</span>
+      </div>
     </div>
     <div class="content">
-      <button class="btn-tambah">+ Tambah Booking</button>
+      <a href="tambahpemesanan.html">
+      <button class="btn-tambah">+ Tambah Pemesanan</button>
+      </a>
       <table>
         <thead>
           <tr>
             <th>No</th>
-            <th>Nama Pelanggan</th>
+            <th>Nama</th>
             <th>No Meja</th>
             <th>Waktu Mulai</th>
             <th>Durasi</th>
@@ -43,7 +53,8 @@
             <td>17:00</td>
             <td>2 jam</td>
             <td>Aktif</td>
-            <td><button>Edit</button> <button>Hapus</button></td>
+            <td>
+              <a href="editpemesanan.html"><button>Edit</button></a> <button>Hapus</button></td>
           </tr>
           <tr>
             <td>2</td>
@@ -52,12 +63,30 @@
             <td>18:30</td>
             <td>1 jam</td>
             <td>Menunggu</td>
-            <td><button>Edit</button> <button>Hapus</button></td>
+            <td>
+              <a href="editpemesanan.html"><button>Edit</button></a> <button>Hapus</button></td>
           </tr>
           <!-- Data booking lainnya -->
         </tbody>
       </table>
     </div>
   </div>
+
+<script>
+  const profileIcon = document.getElementById("profileIcon");
+  const dropdownMenu = document.getElementById("dropdownMenu");
+
+  profileIcon.addEventListener("click", () => {
+    dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+  });
+
+  // Klik di luar dropdown akan menutup menu
+  window.addEventListener("click", (e) => {
+    if (!e.target.closest(".profile-dropdown")) {
+      dropdownMenu.style.display = "none";
+    }
+  });
+</script>
+
 </body>
 </html>
