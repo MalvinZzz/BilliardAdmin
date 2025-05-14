@@ -16,7 +16,7 @@
   
   .left-panel {
     flex: 1;
-    background-color: #f1b980;
+    background-color: #4E71FF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +42,7 @@
   }
   
   .brand span {
-    color: #f19043;
+    color: #f1b980;
   }
   
   .right-panel {
@@ -97,18 +97,10 @@
     border-radius: 5px;
   }
   
-  .options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-  
   .submit-btn {
     width: 100%;
     padding: 12px;
-    background-color: #f1b980;
+    background-color: #4E71FF;
     border: none;
     border-radius: 5px;
     color: #fff;
