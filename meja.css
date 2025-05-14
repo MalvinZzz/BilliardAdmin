@@ -10,7 +10,7 @@
   }
   .sidebar {
     width: 220px;
-    background-color: #1e272e;
+    background-color: #4E71FF;
     color: white;
     padding: 20px 0;
   }
@@ -41,6 +41,70 @@
     justify-content: space-between;
     align-items: center;
   }
+
+/*Profil icon yagesyaa*/
+  .header-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
+  }
+
+  .profile-icon {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .profile-icon:hover {
+    color: #007bff;
+  }
+
+  .admin-name {
+    font-weight: 500;
+    color: #333;
+  }
+
+  .profile-dropdown:hover .dropdown-menu,
+  .profile-dropdown.show .dropdown-menu {
+    display: block;
+  }
+  
+  .profile-dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 6px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 150px;
+    z-index: 1000;
+    overflow: hidden;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #f2f2f2;
+  }
+
+
   .content {
     padding: 20px;
   }
@@ -68,7 +132,7 @@
     background-color: #f1f1f1;
   }
   .btn-tambah {
-    background-color: #3498db;
+    background-color: #f39c12;
     color: white;
     padding: 10px 16px;
     border: none;
@@ -77,5 +141,5 @@
     margin-bottom: 15px;
   }
   .btn-tambah:hover {
-    background-color: #2980b9;
+    background-color: #e67e22;
   }
