@@ -6,12 +6,11 @@
   <title>Transaksi - Admin Billiard</title>
 
   <link rel="stylesheet" href="transaksi.css">
-  <link rel="logo" href="asset/LOGO 1.png, LOGO 2.png">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-/..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <div class="sidebar">
-    <img src="asset/LOGO 1.png" width="180" height="100">
+    <img src="asset/LOGO dashboard.png" width="180" height="100">
     <a href="dashboard.html">Dashboard</a>
     <a href="datapelanggan.html">Data Pelanggan</a>
     <a href="meja.html">Pemesanan Meja</a>
@@ -20,10 +19,20 @@
   <div class="main">
     <div class="topbar">
       <h2>Transaksi</h2>
-      <p>Histori pembayaran pelanggan</p>
+      <div class="header-right">
+        <div class="profile-dropdown">
+          <i class="fa-regular fa-circle-user profile-icon" id="profileIcon"></i>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="profil.html">Profil</a>
+            <a href="logout.html">Logout</a>
+          </div>
+        </div>
+        <span class="admin-name">Admin</span>
+      </div>
     </div>
     <div class="content">
-      <button class="btn-export"> Input Data</button>
+      <a href="inputdata.html"><button class="btn-export"> Input Data</button>
+        </a>
       <table>
         <thead>
           <tr>
@@ -60,5 +69,22 @@
       </table>
     </div>
   </div>
+
+<script>
+  const profileIcon = document.getElementById("profileIcon");
+  const dropdownMenu = document.getElementById("dropdownMenu");
+
+  profileIcon.addEventListener("click", () => {
+    dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+  });
+
+  // Klik di luar dropdown akan menutup menu
+  window.addEventListener("click", (e) => {
+    if (!e.target.closest(".profile-dropdown")) {
+      dropdownMenu.style.display = "none";
+    }
+  });
+</script>
+
 </body>
 </html>
