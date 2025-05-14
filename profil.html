@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profil Admin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+    }
+
+    .profile-container {
+      max-width: 500px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .profile-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .profile-header i {
+      font-size: 60px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .profile-header h2 {
+      margin: 0;
+      font-size: 22px;
+      color: #333;
+    }
+
+    .profile-info {
+      margin-bottom: 20px;
+    }
+
+    .info-item {
+      margin-bottom: 15px;
+    }
+
+    .info-item label {
+      font-weight: bold;
+      display: block;
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    .info-item span {
+      color: #333;
+      display: block;
+    }
+
+    .profile-actions {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .profile-actions button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .edit-btn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .logout-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .edit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .logout-btn:hover {
+      background-color: #b52a37;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-header">
+      <i class="fas fa-user-circle"></i>
+      <h2>Admin Billiard</h2>
+    </div>
+    <div class="profile-info">
+      <div class="info-item">
+        <label>Nama Lengkap</label>
+        <span>Admin Billiard</span>
+      </div>
+      <div class="info-item">
+        <label>Email</label>
+        <span>admin@billiard.com</span>
+      </div>
+      <div class="info-item">
+        <label>Username</label>
+        <span>admin123</span>
+      </div>
+    </div>
+    <div class="profile-actions">
+      <a href="editprofil.html">
+      <button class="edit-btn">Edit Profil</button>
+      </a>
+      <a href="logout.html">
+      <button class="logout-btn">Logout</button>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

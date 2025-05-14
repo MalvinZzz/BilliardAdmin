@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tambah Transaksi - Admin Billiard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .form-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 80px auto;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="number"], input[type="date"], select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            color: white;
+        }
+
+        .btn-cancel {
+            background-color: #6c757d;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-submit {
+            background-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-card">
+            <h2>Input Transaksi</h2>
+            <form action="transaksi.html" method="POST">
+                <label for="nama">Nama Pelanggan</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="meja">No Meja</label>
+                <input type="text" id="meja" name="meja" required>
+
+                <label for="tanggal">Tanggal</label>
+                <input type="date" id="tanggal" name="tanggal" required>
+
+                <label for="durasi">Durasi</label>
+                <input type="text" id="durasi" name="durasi" placeholder="contoh: 2 jam" required>
+
+                <label for="bayar">Total Bayar</label>
+                <input type="text" id="bayar" name="bayar" placeholder="contoh: Rp 60.000" required>
+
+                <label for="metode">Metode Pembayaran</label>
+                <select id="metode" name="metode" required>
+                    <option value="">-- Pilih Metode --</option>
+                    <option value="Cash">Cash</option>
+                    <option value="QRIS">QRIS</option>
+                    <option value="Transfer">Transfer</option>
+                </select>
+
+                <div class="btn-group">
+                    <a href="transaksi.html" class="btn btn-cancel">Batal</a>
+                    <button type="submit" class="btn btn-submit">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
